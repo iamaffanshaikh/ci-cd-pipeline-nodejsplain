@@ -17,7 +17,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           user: root
-          key: ${{ secrets.SSH_KEYS }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/ec2-user/ci-cd-pipeline-nodejsplain
             git pull origin main
