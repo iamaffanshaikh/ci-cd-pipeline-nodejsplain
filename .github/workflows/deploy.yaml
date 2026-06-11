@@ -1,0 +1,25 @@
+name : Deploy on EC2 Machine 
+
+on:
+  push:
+    branches:
+      -main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy using SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          user: root
+          key: ${{ secrets.SSH_KEYS }}
+          script: |
+            cd /home/ec2-user/ci-cd-pipeline-nodejsplain
+            git pull origin main
+            docker compose down
+            docker compose up -d --build
