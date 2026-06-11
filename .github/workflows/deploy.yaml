@@ -21,3 +21,5 @@ jobs:
           script: |
             whoami
             pwd
+            cd /home/ec2-user/ci-cd-pipeline-nodejsplain
+            pwd
