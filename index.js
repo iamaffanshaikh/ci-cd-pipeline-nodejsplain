@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/', (req, res)=>{
 res.send('Hi');
-console.log('/home route hit, hello');
+console.log('/home route hit, hello1');
 })
 
 app.listen(8080, '0.0.0.0', ()=>{
