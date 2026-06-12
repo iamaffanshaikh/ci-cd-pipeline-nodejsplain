@@ -19,6 +19,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.SSH_KEY }}
           script: |
+            cd /home/ec2-user/ci-cd-pipeline-nodejsplain
             eval "$(ssh-agent -s)"
             ssh-add ~/private
             ssh -T git@github.com
