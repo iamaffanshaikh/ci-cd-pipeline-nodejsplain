@@ -27,5 +27,6 @@ jobs:
             env | grep SSH
             eval"$(ssh-agent -s)"
             ssh-add ~/private
+            env | grep SSH
             ssh -T git@github.com
             git pull origin master
