@@ -2,7 +2,7 @@ import express from 'express';
 const app = express();
 
 app.get('/', (req, res)=>{
-// res.send('Hi, hello');
+res.send(`This is ${process.env.USER} from server.`);
 console.log('/home route hit, hello1');
 })
 
