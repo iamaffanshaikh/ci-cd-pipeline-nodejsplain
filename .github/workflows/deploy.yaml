@@ -25,5 +25,7 @@ jobs:
             pwd
             echo $USER
             env | grep SSH
+            eval"$(ssh-agent -s)"
+            ssh-add ~/private
             ssh -T git@github.com
-            git pull origin 
+            git pull origin master
