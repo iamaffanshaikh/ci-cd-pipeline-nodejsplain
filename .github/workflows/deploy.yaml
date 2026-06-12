@@ -25,7 +25,7 @@ jobs:
             pwd
             echo $USER
             env | grep SSH
-            eval"$(ssh-agent -s)"
+            eval "$(ssh-agent -s)"
             ssh-add ~/private
             env | grep SSH
             ssh -T git@github.com
