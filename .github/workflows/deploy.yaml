@@ -24,5 +24,6 @@ jobs:
             cd /home/ec2-user/ci-cd-pipeline-nodejsplain
             pwd
             echo $USER
+            env | grep SSH
             ssh -T git@github.com
             git pull origin 
