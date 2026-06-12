@@ -23,4 +23,5 @@ jobs:
             pwd
             cd /home/ec2-user/ci-cd-pipeline-nodejsplain
             pwd
-            git pull origin
+            echo $USER
+            git pull origin 
