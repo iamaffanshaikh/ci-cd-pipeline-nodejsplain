@@ -2,11 +2,11 @@ import express from 'express';
 const app = express();
 
 app.get('/', (req, res)=>{
-res.send(`This is Affan from server.`);
+res.send(`This is Affan from sfgdfgfd.`);
 console.log('/home route hit, hello1');
 })
 
-app.get('/home', (req, res)=> {
+app.get('/api/user', (req, res)=> {
     res.send("Hello from home")
 })
 
