@@ -10,6 +10,6 @@ app.get('/api/user', (req, res)=> {
     res.send("Hello from home")
 })
 
-app.listen(8080, '0.0.0.0', ()=>{
+app.listen(3002, '0.0.0.0', ()=>{
 console.log("Server is running!");
 })
