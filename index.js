@@ -11,7 +11,7 @@ app.get('/api/user', (req, res)=> {
 })
 
 app.get('/health', (req, res)=> {
-    res.send({ "health" : "ok"})
+    res.send({ "health-v1" : "ok"})
 })
 
 app.listen(3002, '0.0.0.0', ()=>{
